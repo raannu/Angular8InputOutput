@@ -1,0 +1,7 @@
+<h2>Parent Component</h2>
+
+Enter Data for Child Component <input type="text" #parentComponent (keyup)="0">
+<p>Child entered : {{childData}}</p>
+
+
+<app-child [parentData]="parentComponent.value" (childEvent)="test($event)"> </app-child>

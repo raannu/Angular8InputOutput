@@ -1,0 +1,9 @@
+<h2>Child Component</h2>
+<p>Parent entered : {{parentData}}</p>
+Enter Data For Parent Component<input type="text" #childComponent (keyup)="onChange(childComponent.value)">
+<div>
+    
+Enter Data For SubChild Component<input type="text" #subchildComponent (keyup)="0">
+</div>
+<p>SubChild entered : {{subChildData}}</p>
+<app-subchild [subChildData]="subchildComponent.value" (subChildEvent)="test2($event)"></app-subchild>
